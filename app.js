@@ -55,3 +55,54 @@ document.querySelectorAll('.faq-answer').forEach(question => {
       item.classList.remove('active');
   });
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".card", {
+  y: -800, // Start position (800px above the viewport)
+  duration: 0.5, // Duration of the animation
+  stagger: 0.3, // Stagger effect for multiple cards
+  ease: "ease",
+});
+
+gsap.to(".premium-h1-2", {
+  right: 0,
+  left:0,
+  opacity:1,
+  scrollTrigger: {
+    trigger: ".hero", 
+    start: "top top",
+    end: "+=100",
+    scrub: true, 
+    markers: true,
+  },
+});
+
+gsap.to(".premium-h1-1", {
+  x:"-200%",
+  opacity:0,
+  scrollTrigger: {
+    trigger: ".hero", 
+    start: "top top",
+    end: "+=100",
+    scrub: 2, 
+    markers: true,
+  },
+});
+gsap.to(".card", {
+  x: (index) => -index * 400,
+  scrollTrigger: {
+    trigger: ".hero", 
+    start: "top 0%", 
+    end: "bottom 50%",
+    scrub: 2, 
+    pin: true, 
+    markers: true,
+  },
+});
+
+
+
+
+const lettors = gsap.utils.toArray(".scroll-fill-text")
+lettors.map(lettor=>console.log(lettor))

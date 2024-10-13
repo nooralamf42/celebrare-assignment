@@ -152,6 +152,23 @@ h4 {
 
 .hero {
   position: relative;
+  overflow: hidden;
+}
+
+.premium-h1s{
+  position: relative;
+  text-wrap: nowrap;
+  
+  &>h1{
+    display: inline-block;
+  }
+
+  &>h1:last-child{
+    display: inline-block;
+    position: absolute;
+    right: -500px;
+    opacity: 0;
+  }
 }
 
 .hero-circle-right {
