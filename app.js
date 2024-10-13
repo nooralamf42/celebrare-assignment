@@ -86,7 +86,7 @@ gsap.to(".premium-h1-1", {
     start: "top top",
     end: "+=100",
     scrub: 2, 
-    markers: true,
+    // markers: true,
   },
 });
 gsap.to(".card", {
@@ -97,7 +97,7 @@ gsap.to(".card", {
     end: "bottom 50%",
     scrub: 2, 
     pin: true, 
-    markers: true,
+    // markers: true,
   },
 });
 
